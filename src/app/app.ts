@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavBar } from "./modules/shared/components/nav-bar/nav-bar";
-import { SHARED_IMPORTS } from "./modules/shared/models/shared-imports";
+import { SHARED_IMPORTS } from "./modules/shared/consts/shared-imports";
 
 @Component({
   selector: 'app-root',

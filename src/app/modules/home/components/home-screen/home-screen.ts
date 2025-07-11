@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SHARED_IMPORTS } from '../../../shared/models/shared-imports';
+import { SHARED_IMPORTS } from '../../../shared/consts/shared-imports';
 
 @Component({
   selector: 'app-home-screen',

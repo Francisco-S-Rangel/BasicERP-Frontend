@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SHARED_IMPORTS } from '../../models/shared-imports';
+import { SHARED_IMPORTS } from '../../consts/shared-imports';
 
 @Component({
   selector: 'app-nav-bar',
