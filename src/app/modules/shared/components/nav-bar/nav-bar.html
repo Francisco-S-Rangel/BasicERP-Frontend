@@ -1,14 +1,17 @@
 <nav class="flex justify-between p-1.5 shadow-md rounded-md bg-white">
     <div class="flex pl-6">
-        <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5578/5578816.png" alt="..." />
+        <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5578/5578816.png" 
+            alt="..." (click)="goToHome()" />
     </div>
     <div class="flex items-center pr-6">
         <ul class="flex gap-6 text-gray-600 font-semibold">
             <li>
-                <a class="cursor-pointer hover:text-gray-800 hover:font-bold">Departments</a>
+                <a class="cursor-pointer hover:text-gray-800 hover:font-bold"
+                    (click)="goToDepartments()">Departments</a>
             </li>
             <li>
-                <a class="cursor-pointer hover:text-gray:800 hover:font-bold">Employees</a>
+                <a class="cursor-pointer hover:text-gray:800 hover:font-bold"
+                    (click)="goToEmployees()">Employees</a>
             </li>
         </ul>
     </div>
