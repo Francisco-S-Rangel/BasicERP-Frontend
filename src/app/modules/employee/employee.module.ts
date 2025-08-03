@@ -6,7 +6,7 @@ import { EmployeeRoutingModule } from "./employee-routing.module";
     declarations: [],
     imports: [
         SHARED_IMPORTS,
-        EmployeeRoutingModule
+        EmployeeRoutingModule,
     ]
 })
 export class EmployeeModule {}
