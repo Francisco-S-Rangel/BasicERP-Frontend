@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DepartmentDTO } from '../../models/departmentDTO';
+import { DepartmentDTO, DepartmentList } from '../../models/departmentDTO';
 import { DepartmentService } from '../../services/department.service';
+import { activeTab } from '../../../shared/enums/activeTab';
 
 @Component({
   selector: 'app-departments-list',
@@ -10,9 +11,7 @@ import { DepartmentService } from '../../services/department.service';
 })
 export class DepartmentsList implements OnInit {
 
-  _departments: DepartmentDTO[] = [];
-
-  activeTab: 'info' | 'details' = 'info'; 
+  _departments: DepartmentList[] = [];
 
   constructor(private departmentService: DepartmentService) {}
 
@@ -24,7 +23,10 @@ export class DepartmentsList implements OnInit {
     this.departmentService.getDepartments().subscribe({
       next: (response) => {
         console.log(response);
-        this._departments = response.data;
+        this._departments = response.data.map((department: DepartmentDTO) => ({
+          departmentValues: department,
+          activeTab: activeTab.Info
+        }));
       },
       error: (response) => {
         console.log(response);
