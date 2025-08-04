@@ -15,7 +15,7 @@ export class EmployeeDTO {
     departmentId: string = "";
 }
 
-export class EmployeeList {
+export class EmployeeListDTO {
     employeeValues: EmployeeDTO = new EmployeeDTO();
     activeTab: activeTab = activeTab.Info;
 }

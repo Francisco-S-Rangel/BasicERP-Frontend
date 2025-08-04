@@ -19,7 +19,7 @@ export class DepartmentsList implements OnInit {
     this.getDepartments();
   }
 
-  getDepartments(){
+  getDepartments(): void {
     this.departmentService.getDepartments().subscribe({
       next: (response) => {
         console.log(response);
