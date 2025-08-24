@@ -2,19 +2,6 @@
     "message": "Employees found.",
     "data": [
         {
-            "documentId": "44444444444",
-            "birthDate": "2000-09-20T00:00:00Z",
-            "role": "Chief Executive Officer",
-            "gender": 0,
-            "departmentId": "48ee32b3-f604-437d-8a70-241dfa5f4217",
-            "id": "a4cecfc7-a4c5-40dc-9ef0-b3812abc398b",
-            "name": "Francisco de Souza Rangel",
-            "isActive": true,
-            "creationDate": "2025-06-08T02:48:21.942955Z",
-            "modificationDate": "2025-08-03T22:19:24.4453Z",
-            "imageUrl": "https://i.pinimg.com/736x/60/ff/43/60ff434ae8e6fb28a6e6f561c397a929.jpg"
-        },
-        {
             "documentId": "5555555555",
             "birthDate": "2025-08-23T00:00:00Z",
             "role": "Jedi",
@@ -91,6 +78,19 @@
             "creationDate": "2025-06-09T01:06:21.25115Z",
             "modificationDate": "2025-08-24T01:53:37.549109Z",
             "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxDFI1w82oTFwmTrADcSVboP4ilIm0n5iGA&s"
+        },
+        {
+            "documentId": "44444444444",
+            "birthDate": "2000-09-20T00:00:00Z",
+            "role": "Chief Executive Officer",
+            "gender": 0,
+            "departmentId": "48ee32b3-f604-437d-8a70-241dfa5f4217",
+            "id": "a4cecfc7-a4c5-40dc-9ef0-b3812abc398b",
+            "name": "Francisco de Souza Rangel",
+            "isActive": true,
+            "creationDate": "2025-06-08T02:48:21.942955Z",
+            "modificationDate": "2025-08-24T02:16:33.182416Z",
+            "imageUrl": "https://avatars.githubusercontent.com/u/83520199?v=4"
         }
     ]
 }
