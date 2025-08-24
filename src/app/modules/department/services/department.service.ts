@@ -17,4 +17,9 @@ export class DepartmentService {
     public getDepartments(): Observable<ResponseBase<DepartmentDTO[]>> {
         return this.http.get<ResponseBase<DepartmentDTO[]>>(`${this._API}/Department`);
     }
+
+    // Use the mockup if you do not have access to the back end or database.
+    public getDepartmentsOfMockups(): DepartmentDTO[] {
+        return [];
+    }
 }

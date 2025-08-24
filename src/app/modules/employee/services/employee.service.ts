@@ -14,7 +14,12 @@ export class EmployeeService {
 
     constructor(private http: HttpClient) {}
 
-    public getEmployee(): Observable<ResponseBase<EmployeeDTO[]>> {
+    public getEmployees(): Observable<ResponseBase<EmployeeDTO[]>> {
         return this.http.get<ResponseBase<EmployeeDTO[]>>(`${this._API}/Employee`);
+    }
+
+    // Use the mockup if you do not have access to the back end or database.
+    public getEmployessOfMockups(): EmployeeDTO[] {
+        return [];
     }
 }

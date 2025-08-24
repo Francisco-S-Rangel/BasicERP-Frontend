@@ -1,0 +1,49 @@
+{
+    "message": "Departments found.",
+    "data": [
+        {
+            "acronym": "BD",
+            "description": "Those who hold the power.",
+            "employees": [],
+            "id": "48ee32b3-f604-437d-8a70-241dfa5f4217",
+            "name": "Board of Directors",
+            "isActive": true,
+            "creationDate": "2025-06-08T02:02:59.313041Z",
+            "modificationDate": "2025-06-08T02:02:59.313041Z",
+            "imageUrl": "https://cdn.businessday.ng/2015/02/Board-of-Directors-1.png"
+        },
+        {
+            "acronym": "IT",
+            "description": "The IT department has three major areas of concern, which include governance of the company's technological systems, maintenance of the infrastructure and functionality of the systems overall. Beyond that, professionals within the IT department work internally on computer software and hardware in many ways that allow a business to be successful.",
+            "employees": [],
+            "id": "1cc73e9a-0681-4ff2-b85a-3c39a96f1a0e",
+            "name": "Information Technology",
+            "isActive": true,
+            "creationDate": "2025-06-09T01:01:59.913666Z",
+            "modificationDate": "2025-06-09T01:01:59.913666Z",
+            "imageUrl": "https://images.ctfassets.net/pdf29us7flmy/1jV8OwnhTpaJSxQAVNlRW7/e6d8e3ba3a367beb00447fedc90d1420/GettyImages-473983321__1_.jpg?w=720&q=100&fm=jpg"
+        },
+        {
+            "acronym": "QA",
+            "description": "Is responsible for ensuring that a product or service meets established quality standards.",
+            "employees": [],
+            "id": "22901a46-befb-4bf6-8bde-592e177010a3",
+            "name": "Quality Assurance",
+            "isActive": true,
+            "creationDate": "2025-08-23T23:02:23.362828Z",
+            "modificationDate": "2025-08-23T23:02:23.362829Z",
+            "imageUrl": "https://testingcompany.com.br/admin/plugins/images/imagem_blog152.jpg"
+        },
+        {
+            "acronym": "HR",
+            "description": "Manages the company's employees",
+            "employees": [],
+            "id": "2207b4f2-5ff3-4295-8e15-47614580fd50",
+            "name": "Human Resources",
+            "isActive": true,
+            "creationDate": "2025-06-07T22:02:00.688921Z",
+            "modificationDate": "2025-08-23T23:32:16.292117Z",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM0aYrucs2wkLWrNJhIrSzh7mp2hpeBGkLYw&s"
+        }
+    ]
+}

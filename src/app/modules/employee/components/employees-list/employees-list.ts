@@ -20,7 +20,7 @@ export class EmployeesList implements OnInit {
   }
 
   getEmployees(): void {
-    this.employeeService.getEmployee().subscribe({
+    this.employeeService.getEmployees().subscribe({
       next: (response) => {
         console.log(response);
         this._employees = response.data.map((employee: EmployeeDTO) => ({
