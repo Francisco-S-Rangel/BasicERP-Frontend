@@ -1,4 +1,4 @@
-{
+export const DEPARTMENTS_MOCKUPS = {
     "message": "Departments found.",
     "data": [
         {

@@ -1,4 +1,4 @@
-{
+export const EMPLOYEES_MOCKUPS = {
     "message": "Employees found.",
     "data": [
         {
