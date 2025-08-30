@@ -16,7 +16,28 @@ export class DepartmentsList implements OnInit {
   constructor(private departmentService: DepartmentService) {}
 
   ngOnInit() {
-    this.getDepartments();
+    // Use this method if you have the back-end and the database
+    // this.getDepartments();
+
+    // You must initialize the localStorage first if it is empty.
+    this.departmentService.initializeLocalStorageDepartment();
+    // Use this method to use the mockup in localStorage(). 
+    this.getDepartmentsByLocalStorage();
+  }
+
+  onSearch(searchValue: string): void {
+    console.log(searchValue);
+    const query = searchValue.toLowerCase().trim();
+
+    if(!query) {
+      this.getDepartmentsByLocalStorage();
+      return;
+    }
+
+    this._departments = this._departments.filter(department =>
+      department.departmentValues.name.toLowerCase().includes(query));
+
+    console.log(this._departments);
   }
 
   getDepartments(): void {
@@ -35,11 +56,27 @@ export class DepartmentsList implements OnInit {
     })
   }
 
+  createDepartment(){
+    
+  }
+
   editDepartment(){
 
   }
 
-  gotToEmployeeOfTheDepartment(){
+  getDepartmentsByLocalStorage(): void {
+    try {
+      const response = this.departmentService.getDepartmentsMockups();
+      console.log(response);
 
+      this._departments = response.data.map((department: DepartmentDTO) => ({
+        departmentValues: department,
+        activeTab: activeTab.Info
+      }));
+    } catch (error) {
+      console.log(error);
+      this._departments = [];
+    }
   }
+
 }

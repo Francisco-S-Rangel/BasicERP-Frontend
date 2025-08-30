@@ -1,6 +1,13 @@
 <div class="flex flex-col items-center justify-center">
   <div class="w-full mt-25 mb-10">
-    <app-search-bar class="w-full"></app-search-bar>
+    <div class="w-4/5 mx-auto flex">
+      <app-search-bar class="w-full" (searchEvent)="onSearch($event)"></app-search-bar>
+      <button type="button" class="py-2 px-4 me-2 mb-2 text-sm font-medium cursor-pointer text-gray-600 
+      focus:outline-none bg-white rounded-lg border border-gray-100 hover:bg-gray-100 hover:text-gray-800 focus:z-1"
+      (click)="createDepartment()">
+        Create Department
+      </button>
+    </div>
     @for (department of _departments; track department.departmentValues.id) {
       <div class="w-4/5 mx-auto bg-white border border-gray-50 rounded-lg shadow-sm mt-5">
         <div class="flex">
@@ -57,11 +64,11 @@
               <div class="w-full flex-col items-center">
                 <h5 class="mb-2 text-xl font-bold text-gray-800">Status: 
                   <span [ngClass]="{
-                    'text-2xl font-bold text-green-700': department.departmentValues.isActive,
-                    'text-2xl font-bold text-red-700': !department.departmentValues.isActive
-                  }">{{department.departmentValues.isActive? 'Active': 'Inactive'}}</span>
+                    'text-green-700': department.departmentValues.isActive,
+                    'text-red-700': !department.departmentValues.isActive
+                  }" class="text-1xl font-bold">{{department.departmentValues.isActive? 'Active': 'Inactive'}}</span>
                 </h5>
-                <p class="font-bold text-gray-700">Creation Date: {{department.departmentValues.creationDate | date: 'short'}}</p>
+                <p class="font-bold text-gray-700">Creation Date: {{department.departmentValues.creationDate | date: 'MM/dd/yyyy'}}</p>
               </div>
               <div class="w-full flex flex-col items-center">
                 <button class="bg-gray-500 text-white hover:bg-gray-700 font-medium rounded-full text-sm text-center me-2 mb-2 px-5 py-2 cursor-pointer">
@@ -76,9 +83,13 @@
         }
       </div>
     } @empty {
-      <h1 class="text-center text-gray-200 text-3xl">
-        There's no Departments
-      </h1>
+      <div class="w-4/5 mx-auto flex bg-white border-gray-700 rounded-lg shadow-sm mt-5">
+        <div class="w-full flex flex-col items-center justify-center p-5">
+          <div class="mb-2 text-2xl font-bold tracking-tight text-gray-500">
+            There are no Departments
+          </div>
+        </div>
+      </div>
     }
   </div>
 </div>

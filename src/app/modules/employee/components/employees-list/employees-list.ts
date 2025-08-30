@@ -16,7 +16,26 @@ export class EmployeesList implements OnInit {
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
-    this.getEmployees();
+     // Use this method if you have the back-end and the database
+    // this.getEmployees();
+
+    // You must initialize the localStorage first if it is empty.
+    this.employeeService.initializedLocalStorageEmployee();
+    // Use this method to use the mockup in localStorage().
+     this.getEployeesByLocalStorage();
+  }
+
+  onSearch(searchValue: string): void {
+    const query = searchValue.toLowerCase().trim();
+
+    if(!query) {
+      this.getEployeesByLocalStorage();
+      return;
+    }
+
+    this._employees = this._employees.filter(employee =>
+      employee.employeeValues.name.toLowerCase().includes(query)
+    );
   }
 
   getEmployees(): void {
@@ -35,4 +54,22 @@ export class EmployeesList implements OnInit {
     })
   }
 
+  createEmployee(): void {
+
+  }
+
+  getEployeesByLocalStorage(): void {
+    try {
+      const response = this.employeeService.getEmployeesMockups();
+      console.log(response);
+
+      this._employees = response.data.map((employee: EmployeeDTO) => ({
+        employeeValues: employee,
+        activeTab: activeTab.Info
+      }));
+    } catch (error) {
+      console.log(error);
+      this._employees = [];
+    }
+  }
 }

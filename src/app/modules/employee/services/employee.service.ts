@@ -4,6 +4,7 @@ import { ResponseBase } from "../../shared/models/responseBase";
 import { EmployeeDTO } from "../models/employeeDTO";
 import { Observable } from "rxjs";
 import { Injectable } from "@angular/core";
+import { EMPLOYEES_MOCKUPS } from "../../shared/consts/employees-mockups";
 
 @Injectable({
     providedIn: 'root'
@@ -18,8 +19,15 @@ export class EmployeeService {
         return this.http.get<ResponseBase<EmployeeDTO[]>>(`${this._API}/Employee`);
     }
 
-    // Use the mockup if you do not have access to the back end or database.
-    public getEmployessOfMockups(): EmployeeDTO[] {
-        return [];
+    // Use the mockup(localStotage) if you do not have access to the back end or database.
+    public initializedLocalStorageEmployee() {
+        let employees = JSON.parse(localStorage.getItem('employeesMockups') || '[]');
+
+        employees = EMPLOYEES_MOCKUPS;
+        localStorage.setItem('employeesMockups', JSON.stringify(employees));
+    }
+
+    public getEmployeesMockups(): ResponseBase<EmployeeDTO[]> {
+        return JSON.parse(localStorage.getItem('employeesMockups') || '[]');
     }
 }

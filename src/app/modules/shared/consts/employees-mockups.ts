@@ -8,8 +8,8 @@ export const EMPLOYEES_MOCKUPS = {
             "gender": 0,
             "departmentId": "22901a46-befb-4bf6-8bde-592e177010a3",
             "id": "252dd148-d951-4d50-9dcc-56ad91c3439d",
-            "name": "Lucky Skywalker",
-            "isActive": true,
+            "name": "Luke Skywalker",
+            "isActive": false,
             "creationDate": "2025-08-23T23:24:38.024358Z",
             "modificationDate": "2025-08-23T23:28:38.679216Z",
             "imageUrl": "https://s2.glbimg.com/LttsvVoQZGHoIJsmdlXMULY336A=/e.glbimg.com/og/ed/f/original/2019/09/23/ea1e16061bdf92edb111d8808c6741a6.jpg"
@@ -21,7 +21,7 @@ export const EMPLOYEES_MOCKUPS = {
             "gender": 1,
             "departmentId": "22901a46-befb-4bf6-8bde-592e177010a3",
             "id": "be1d72c4-af96-4b0d-9e86-b53767f89468",
-            "name": "Leia Organar",
+            "name": "Leia Organa",
             "isActive": true,
             "creationDate": "2025-08-23T23:58:54.280563Z",
             "modificationDate": "2025-08-24T00:00:52.415607Z",
@@ -30,7 +30,7 @@ export const EMPLOYEES_MOCKUPS = {
         {
             "documentId": "1212121212",
             "birthDate": "2025-08-23T00:00:00Z",
-            "role": "TI  GuY",
+            "role": "IT GUY",
             "gender": 0,
             "departmentId": "1cc73e9a-0681-4ff2-b85a-3c39a96f1a0e",
             "id": "0e743888-a88a-4f18-be54-6394c45c5b5c",
